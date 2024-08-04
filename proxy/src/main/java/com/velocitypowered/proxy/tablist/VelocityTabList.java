@@ -120,10 +120,6 @@ public class VelocityTabList implements InternalTabList {
           actions.add(UpsertPlayerInfoPacket.Action.UPDATE_LATENCY);
           playerInfoEntry.setLatency(entry.getLatency());
         }
-        if (!Objects.equals(previousEntry.getGameMode(), entry.getGameMode())) {
-          actions.add(UpsertPlayerInfoPacket.Action.UPDATE_GAME_MODE);
-          playerInfoEntry.setGameMode(entry.getGameMode());
-        }
         if (!Objects.equals(previousEntry.isListed(), entry.isListed())) {
           actions.add(UpsertPlayerInfoPacket.Action.UPDATE_LISTED);
           playerInfoEntry.setListed(entry.isListed());
